@@ -1,5 +1,4 @@
-
-import React from 'react'
+import Image from 'next/image'; // Import the Image component from Next.js
 
 const partners = [
   { name: 'Restaurant', logo: '/bakery1.png' },
@@ -8,7 +7,7 @@ const partners = [
   { name: 'Wolf Coffee', logo: '/bakery4.png' },
   { name: 'Bistro', logo: '/bakery5.png' },
   { name: 'Bakery', logo: '/bakery6.png' },
-]
+];
 
 export default function PartnersAndClients() {
   return (
@@ -22,14 +21,16 @@ export default function PartnersAndClients() {
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
         {partners.map((partner, index) => (
           <div key={index} className="flex justify-center">
-            <img
+            <Image
               src={partner.logo}
               alt={`${partner.name} logo`}
+              width={160} // Width of the image (adjust as per design needs)
+              height={64} // Height of the image (adjust as per design needs)
               className="max-h-24 sm:max-h-32 w-auto grayscale hover:grayscale-0 transition-all duration-300"
             />
           </div>
         ))}
       </div>
     </section>
-  )
+  );
 }
