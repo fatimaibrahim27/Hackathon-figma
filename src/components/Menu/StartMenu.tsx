@@ -1,4 +1,3 @@
-
 import { menuItems } from '@/constant/Menu';
 import { Coffee } from 'lucide-react';
 import Heading from '../Heading/Heading';
